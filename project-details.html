@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="In-depth details of projects built by Lewi Ephrem." />
+  <title>Project Details | Lewi Ephrem</title>
+
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="project-details.css" />
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <a href="index.html" class="logo">LE<span class="logo-dot">.</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html" class="active" aria-current="page">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="icon-sun" aria-hidden="true">☀</span>
+      <span class="icon-moon" aria-hidden="true">☾</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="details-page">
+      <div class="page-header">
+        <p class="eyebrow">Deep Dive</p>
+        <h1>Behind the builds.</h1>
+        <p class="lede">A closer look at the problems, features, and technologies behind my core projects.</p>
+      </div>
+
+      <div class="showcases">
+        
+        <!-- School Management System -->
+        <article class="showcase">
+          <div class="showcase-visual">
+            <img src="projects/school-system.jpg" alt="School Management System interface" />
+          </div>
+          <div class="showcase-content">
+            <span class="project-index">01</span>
+            <h2>School Management System</h2>
+            <p class="project-desc">A complete web-based architecture designed to manage the administrative lifecycle of a school. It replaces manual paperwork with a centralized database for tracking students, educators, academic performance, and institutional resources.</p>
+            
+            <div class="project-meta">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li>Role-based access control (Admin, Teacher, Student)</li>
+                <li>Automated grade calculations and report generation</li>
+                <li>Centralized class and resource scheduling</li>
+              </ul>
+              
+              <h3>Tech Stack</h3>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
+              </ul>
+            </div>
+            <a href="#" class="link-arrow">View live project →</a>
+          </div>
+        </article>
+
+        <!-- Smart Blind Stick -->
+        <article class="showcase reverse">
+          <div class="showcase-visual">
+            <img src="projects/blind-stick.jpg" alt="Smart Blind Stick hardware" />
+          </div>
+          <div class="showcase-content">
+            <span class="project-index">02</span>
+            <h2>Smart Blind Stick</h2>
+            <p class="project-desc">An applied hardware project bridging the gap between embedded programming and real-world accessibility. Built using Arduino, it actively detects physical obstacles to assist visually impaired individuals in navigating their environment safely.</p>
+            
+            <div class="project-meta">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li>Real-time ultrasonic obstacle detection</li>
+                <li>Haptic and auditory feedback systems (Buzzer/Vibration)</li>
+                <li>Lightweight, battery-powered portable design</li>
+              </ul>
+              
+              <h3>Tech Stack</h3>
+              <ul class="tags">
+                <li>Arduino</li><li>C++</li><li>Hardware Integration</li>
+              </ul>
+            </div>
+            <a href="#" class="link-arrow">View source code →</a>
+          </div>
+        </article>
+
+        <!-- YouTube Downloader -->
+        <article class="showcase">
+          <div class="showcase-visual">
+            <img src="projects/youtube-downloader.jpg" alt="YouTube Downloader interface" />
+          </div>
+          <div class="showcase-content">
+            <span class="project-index">03</span>
+            <h2>YouTube Downloader</h2>
+            <p class="project-desc">A utility application exploring the connection between a lightweight frontend interface and a robust Python backend. It allows users to parse and download video content seamlessly without relying on third-party ad-heavy platforms.</p>
+            
+            <div class="project-meta">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li>Customizable resolution and format selection</li>
+                <li>Audio-only extraction mode</li>
+                <li>Asynchronous download handling via Python</li>
+              </ul>
+              
+              <h3>Tech Stack</h3>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li>
+              </ul>
+            </div>
+            <a href="#" class="link-arrow">View repository →</a>
+          </div>
+        </article>
+
+        <!-- Personal Portfolio -->
+        <article class="showcase reverse">
+          <div class="showcase-visual">
+            <img src="projects/portfolio.jpg" alt="Portfolio design" />
+          </div>
+          <div class="showcase-content">
+            <span class="project-index">04</span>
+            <h2>Personal Portfolio</h2>
+            <p class="project-desc">A custom-built digital identity avoiding generic templates. Designed around a strict 8-point grid, editorial typography, and a handcrafted theme-switching architecture to present work with deliberate visual hierarchy.</p>
+            
+            <div class="project-meta">
+              <h3>Key Features</h3>
+              <ul class="feature-list">
+                <li>Flash-free system/light/dark theme persistence</li>
+                <li>Fluid typography scaling using CSS clamp()</li>
+                <li>Asymmetric CSS Grid layouts without frameworks</li>
+              </ul>
+              
+              <h3>Tech Stack</h3>
+              <ul class="tags">
+                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>UI/UX Design</li>
+              </ul>
+            </div>
+            <a href="https://thelewi.github.io/" class="link-arrow">View live project →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cta-box">
+        <h2>What's next?</h2>
+        <p>I'm constantly experimenting with new frameworks and architectural patterns. More case studies are on the way.</p>
+        <a href="contact.html" class="btn btn-primary">Let's build together</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-layout">
+      <div class="footer-brand">
+        <span class="logo">LE.</span>
+        <p>Turning messy problems into clean systems.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    toggle.addEventListener("click", () => {
+      const current = document.documentElement.dataset.theme;
+      const next = current === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+  </script>
+</body>
+</html>

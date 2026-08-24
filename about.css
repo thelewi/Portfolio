@@ -1,0 +1,335 @@
+/* ==========================================================
+   Design tokens — identical to index.css and skills.css
+========================================================== */
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --text: #191713;
+  --muted: #6f6b62;
+  --border: #ddd9d0;
+  --accent: #e8490f;
+  --accent-soft: rgba(232, 73, 15, 0.12);
+
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Newsreader", Georgia, serif;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 200ms;
+  --container: 1080px;
+}
+
+[data-theme="dark"] {
+  --bg: #14130f;
+  --surface: #1d1b17;
+  --text: #ece8e0;
+  --muted: #a39d8f;
+  --border: #33302a;
+  --accent: #ff6a2b;
+  --accent-soft: rgba(255, 106, 43, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --bg: #14130f; --surface: #1d1b17; --text: #ece8e0;
+    --muted: #a39d8f; --border: #33302a; --accent: #ff6a2b;
+  }
+}
+
+/* ==========================================================
+   Base
+========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+::selection { background: var(--accent); color: var(--bg); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ==========================================================
+   Header — same on every page
+========================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; }
+.logo-dot { color: var(--accent); }
+
+.nav { display: flex; gap: var(--space-4); margin-left: auto; font-size: 14px; }
+.nav a { color: var(--muted); transition: color var(--dur) var(--ease); }
+.nav a:hover, .nav a.active { color: var(--text); }
+
+.theme-toggle {
+  width: 42px; height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.theme-toggle:hover { border-color: var(--accent); transform: rotate(12deg); }
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: inline; }
+
+/* ==========================================================
+   Hero
+========================================================== */
+.hero {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-4) var(--space-12);
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  margin-top: var(--space-2);
+}
+
+.hero h1 em { color: var(--muted); font-style: italic; }
+
+.lede { max-width: 34rem; color: var(--muted); margin-top: var(--space-3); }
+
+.hero-portrait { display: flex; justify-content: flex-end; }
+
+.portrait { position: relative; width: min(340px, 100%); margin: 0; }
+
+.portrait::before {
+  content: "";
+  position: absolute;
+  inset: 18px -18px -18px 18px;
+  background: var(--accent-soft);
+  border: 1px solid var(--accent);
+  opacity: 0.55;
+}
+
+.portrait img {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+/* ==========================================================
+   Sections
+========================================================== */
+.section {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4);
+  border-top: 1px solid var(--border);
+}
+
+.section > h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+  margin-bottom: var(--space-4);
+}
+
+/* Asymmetric two-column: heading left, prose right */
+.split {
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.split > h2 {
+  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+}
+
+.split .prose { max-width: 40rem; }
+
+.prose p {
+  color: var(--muted);
+  margin-bottom: var(--space-3);
+}
+
+.prose strong { color: var(--text); font-weight: 600; }
+
+blockquote {
+  margin: var(--space-4) 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--accent);
+  background: var(--accent-soft);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text);
+}
+
+/* ==========================================================
+   Cards
+========================================================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: var(--space-6);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+
+.card:hover {
+  border-color: var(--accent);
+  transform: translateY(-3px);
+}
+
+.card-num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.card h3 { font-size: 1.4rem; margin-bottom: var(--space-2); }
+.card p { color: var(--muted); font-size: 15px; }
+
+/* ==========================================================
+   Mindset quote card
+========================================================== */
+.quote-card {
+  border: 1px solid var(--accent);
+  background: var(--accent-soft);
+  padding: var(--space-6);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--text);
+  align-self: center;
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+.cta { text-align: center; padding-bottom: var(--space-16); }
+
+.cta h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: var(--space-2); }
+.cta .lede { margin: 0 auto; }
+
+.hero-actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-6);
+}
+
+.link-arrow { position: relative; font-size: 14px; font-weight: 600; }
+.link-arrow::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 100%; height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms var(--ease);
+}
+.link-arrow:hover::after { transform: scaleX(1); }
+
+/* ==========================================================
+   Footer — same on every page
+========================================================== */
+.site-footer {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-12);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-note { margin-left: auto; }
+.site-footer a:hover { color: var(--accent); }
+
+/* ==========================================================
+   Responsive
+========================================================== */
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; gap: var(--space-4); }
+  .card-grid { grid-template-columns: 1fr; }
+  .hero { grid-template-columns: 1fr; gap: var(--space-8); }
+  .hero-portrait { justify-content: flex-start; }
+  .portrait { width: min(280px, 80%); }
+}
+
+@media (max-width: 600px) {
+  .site-header { flex-wrap: wrap; gap: var(--space-2); }
+  .nav { order: 3; width: 100%; justify-content: center; padding-bottom: 8px; gap: var(--space-2); font-size: 13px; }
+  .hero { padding-top: var(--space-8); }
+  .section { padding-top: var(--space-8); }
+  .card { padding: var(--space-4); }
+  .footer-note { display: none; }
+}
+
+/* ==========================================================
+   Reduced motion
+========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

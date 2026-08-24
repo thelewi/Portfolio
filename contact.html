@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Lewi Ephrem — have a project idea, question, or opportunity? Send a message." />
+  <title>Contact | Lewi Ephrem</title>
+
+  <script>document.documentElement.classList.replace("no-js", "js");</script>
+
+  <!-- Set theme before paint so there's no flash -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body id="top">
+
+  <header class="site-header">
+    <a href="index.html" class="logo">LE<span class="logo-dot">.</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html" class="active" aria-current="page">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="icon-sun" aria-hidden="true">☀</span>
+      <span class="icon-moon" aria-hidden="true">☾</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="contact-page">
+
+      <div class="contact-header">
+        <p class="eyebrow">Contact</p>
+        <h1>Let's work together.</h1>
+        <p class="lede">
+          Have a project idea, a question, or an opportunity?
+          Send me a message — I'll get back to you.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info + socials -->
+        <div class="contact-info">
+          <h2>Find me here</h2>
+          <p class="lede">
+            I'm always interested in new projects, creative ideas, and
+            opportunities to learn and build something useful.
+          </p>
+          <ul class="socials">
+            <li><a href="https://thelewi.github.io/Portfolio/" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/itzthelewi/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+            <li><a href="https://www.instagram.com/itz.thelewi/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+            <li><a href="https://www.youtube.com/@LewiEphrem" target="_blank" rel="noopener noreferrer">YouTube ↗</a></li>
+            <li><a href="https://t.me/lewiep" target="_blank" rel="noopener noreferrer">Telegram ↗</a></li>
+            <li><a href="https://wa.me/+251994367526" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
+          </ul>
+          <a href="mailto:itz.thelewi@email.com" class="link-arrow">itz.thelewi@email.com →</a>
+        </div>
+
+        <!-- Form -->
+        <form class="contact-form" action="https://formspree.io/f/mbgraepy" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit" class="send-btn">Send message</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Lewi Ephrem</span>
+    <span class="footer-note">Designed & built by hand</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <script>
+    // Theme toggle (shared with the other pages)
+    const root = document.documentElement;
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

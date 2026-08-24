@@ -1,0 +1,301 @@
+/* ==========================================================
+   Design tokens — identical to index.css so themes match
+========================================================== */
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --text: #191713;
+  --muted: #6f6b62;
+  --border: #ddd9d0;
+  --accent: #e8490f;
+  --accent-soft: rgba(232, 73, 15, 0.12);
+
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-display: "Newsreader", Georgia, serif;
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-12: 96px;
+
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur: 200ms;
+  --container: 1080px;
+}
+
+[data-theme="dark"] {
+  --bg: #14130f;
+  --surface: #1d1b17;
+  --text: #ece8e0;
+  --muted: #a39d8f;
+  --border: #33302a;
+  --accent: #ff6a2b;
+  --accent-soft: rgba(255, 106, 43, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --bg: #14130f; --surface: #1d1b17; --text: #ece8e0;
+    --muted: #a39d8f; --border: #33302a; --accent: #ff6a2b;
+  }
+}
+
+/* ==========================================================
+   Base
+========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text);
+  background: var(--bg);
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+
+a { color: inherit; text-decoration: none; }
+
+::selection { background: var(--accent); color: var(--bg); }
+
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ==========================================================
+   Header — same as index
+========================================================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-4);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo { font-family: var(--font-display); font-size: 1.5rem; font-weight: 500; letter-spacing: -0.02em; }
+.logo-dot { color: var(--accent); }
+
+.nav {
+  display: flex;
+  gap: var(--space-4);
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.nav a { color: var(--muted); transition: color var(--dur) var(--ease); }
+.nav a:hover, .nav a.active { color: var(--text); }
+
+.theme-toggle {
+  width: 42px; height: 42px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--surface);
+  color: var(--text);
+  font-size: 15px;
+  cursor: pointer;
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+}
+.theme-toggle:hover { border-color: var(--accent); transform: rotate(12deg); }
+.theme-toggle .icon-moon { display: none; }
+[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: inline; }
+
+/* ==========================================================
+   Page
+========================================================== */
+.skills-page {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-12) var(--space-4) var(--space-12);
+}
+
+.skills-header {
+  max-width: 44rem;
+  margin-bottom: var(--space-8);
+}
+
+.skills-header h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-top: var(--space-2);
+}
+
+.lede { color: var(--muted); margin-top: var(--space-2); max-width: 36rem; }
+
+/* ==========================================================
+   Skill sections
+========================================================== */
+.skill-section {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: var(--space-6);
+  margin-bottom: var(--space-3);
+}
+
+/* Subtle reveal — only when JS is on */
+.js .skill-section {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+}
+
+.js .skill-section.show { opacity: 1; transform: none; }
+
+.skill-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-2) var(--space-4);
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border);
+}
+
+.skill-head h2 { font-size: 1.6rem; }
+
+.skill-number {
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  margin-right: 10px;
+}
+
+.skill-head p { color: var(--muted); font-size: 14px; }
+
+.skill-overall {
+  margin-left: auto;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ==========================================================
+   Sub-skills
+========================================================== */
+.subskills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4) var(--space-6);
+}
+
+.subskill-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.subskill-info strong { color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+.bar {
+  height: 3px;
+  background: var(--border);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: var(--accent);
+  transition: width 1s var(--ease);
+}
+
+.js .skill-section.show .fill { width: var(--w); }
+
+/* ==========================================================
+   Bottom CTA
+========================================================== */
+.skills-bottom {
+  max-width: 44rem;
+  margin: var(--space-8) auto 0;
+  text-align: center;
+}
+
+.skills-bottom h2 { font-size: clamp(1.8rem, 3.5vw, 2.6rem); }
+
+.skills-bottom p { color: var(--muted); margin: var(--space-2) 0 var(--space-4); }
+
+.link-arrow { position: relative; font-size: 14px; font-weight: 600; }
+.link-arrow::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 100%; height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 300ms var(--ease);
+}
+.link-arrow:hover::after { transform: scaleX(1); }
+
+/* ==========================================================
+   Footer — same as index
+========================================================== */
+.site-footer {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: var(--space-6) var(--space-4) var(--space-12);
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.footer-note { margin-left: auto; }
+.site-footer a:hover { color: var(--accent); }
+
+/* ==========================================================
+   Responsive
+========================================================== */
+@media (max-width: 800px) {
+  .nav { gap: var(--space-2); font-size: 13px; }
+  .site-header { gap: var(--space-2); }
+  .subskills { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 600px) {
+  .site-header { flex-wrap: wrap; }
+  .nav { order: 3; width: 100%; justify-content: center; padding-bottom: 8px; }
+  .skills-page { padding-top: var(--space-8); }
+  .skill-section { padding: var(--space-4); }
+  .footer-note { display: none; }
+}
+
+/* ==========================================================
+   Reduced motion
+========================================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

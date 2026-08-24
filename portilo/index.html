@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lewi Ephrem — web developer and student building clean, responsive websites, management systems and creative digital projects." />
+  <title>Lewi Ephrem — Web Developer</title>
+
+  <!-- Set theme before paint so there's no flash of the wrong theme -->
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a href="#home" class="logo">LE<span class="logo-dot">.</span></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About</a>
+      <a href="skills.html">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
+      <span class="icon-sun" aria-hidden="true">☀</span>
+      <span class="icon-moon" aria-hidden="true">☾</span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">Web Developer · Student · Creator</p>
+        <h1>Hey, I'm Lewi.<br /><em>I build for the web.</em></h1>
+        <p class="lede">
+          Clean, responsive websites, management systems and creative digital
+          projects — built by learning, experimenting and shipping.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="link-arrow">See my work →</a>
+          <a href="contact.html" class="link-arrow">Let's talk →</a>
+
+        </div>
+      </div>
+      <div class="hero-portrait">
+        <figure class="portrait">
+          <img src="assets/my.jpg" alt="Portrait of Lewi Ephrem" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <p class="eyebrow">About</p>
+      <h2>A curious developer<br />who builds by doing.</h2>
+      <div class="section-body">
+        <p>
+          I'm Lewi — I enjoy turning ideas into real, useful experiences.
+          I'm passionate about <strong>web development, programming and
+          creative projects</strong>, and I learn best by building.
+        </p>
+        <p>
+          For me, good development isn't just code. It's understanding the
+          problem, thinking creatively, and shipping things people can
+          actually use.
+        </p>
+        <dl class="facts">
+          <div><dt>Status</dt><dd>Student & web developer</dd></div>
+          <div><dt>Focus</dt><dd>Web apps, tools, creative projects</dd></div>
+          <div><dt>Stack</dt><dd>PHP, MySQL, Python, JavaScript</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <p class="eyebrow">Skills</p>
+      <h2>Tools I work with.</h2>
+      <div class="section-body">
+        <p class="lede">Technologies I've been learning and using — honest self-ratings, real proof in the projects below.</p>
+
+        <div class="skills-list" id="skills-list">
+          <div class="skill">
+            <div class="skill-top"><span>PHP</span><span class="skill-pct">95%</span></div>
+            <div class="bar"><span class="fill" style="--w: 95%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>HTML</span><span class="skill-pct">90%</span></div>
+            <div class="bar"><span class="fill" style="--w: 90%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>MySQL</span><span class="skill-pct">80%</span></div>
+            <div class="bar"><span class="fill" style="--w: 80%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>Python</span><span class="skill-pct">75%</span></div>
+            <div class="bar"><span class="fill" style="--w: 75%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>CSS</span><span class="skill-pct">50%</span></div>
+            <div class="bar"><span class="fill" style="--w: 50%"></span></div>
+          </div>
+          <div class="skill">
+            <div class="skill-top"><span>JavaScript</span><span class="skill-pct">50%</span></div>
+            <div class="bar"><span class="fill" style="--w: 50%"></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <p class="eyebrow">Projects</p>
+      <h2>Things I've built.</h2>
+
+      <div class="projects">
+        <article class="project">
+          <span class="project-index">01</span>
+          <div class="project-main">
+            <h3><a href="projects.html">School Management System</a></h3>
+            <p>A web-based system for managing students, teachers, marks, users and school information.</p>
+            <ul class="tags">
+              <li>HTML</li><li>CSS</li><li>PHP</li><li>JavaScript</li><li>MySQL</li>
+            </ul>
+          </div>
+          <a class="project-link" href="projects.html" aria-label="School Management System">↗</a>
+        </article>
+
+        <article class="project">
+          <span class="project-index">02</span>
+          <div class="project-main">
+            <h3><a href="projects.html">Smart Blind Stick</a></h3>
+            <p>An Arduino-based stick that detects obstacles and helps the user navigate safely.</p>
+            <ul class="tags">
+              <li>Arduino</li><li>C++</li>
+            </ul>
+          </div>
+          <a class="project-link" href="projects.html" aria-label="Smart Blind Stick">↗</a>
+        </article>
+
+        <article class="project">
+          <span class="project-index">03</span>
+          <div class="project-main">
+            <h3><a href="projects.html">YouTube Downloader</a></h3>
+            <p>A tool for downloading YouTube videos through a web interface with a Python backend.</p>
+            <ul class="tags">
+              <li>Python</li>
+            </ul>
+          </div>
+          <a class="project-link" href="projects.html" aria-label="YouTube Downloader">↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's work together.</h2>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="lede">
+            Have a project idea, a question, or an opportunity?
+            Send me a message — I'll get back to you.
+          </p>
+          <ul class="socials">
+            <li><a href="https://github.com/thelewi" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/itzthelewi/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
+            <li><a href="https://www.instagram.com/itz.thelewi/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
+            <li><a href="https://www.youtube.com/@LewiEphrem" target="_blank" rel="noopener noreferrer">YouTube ↗</a></li>
+            <li><a href="https://t.me/lewiep" target="_blank" rel="noopener noreferrer">Telegram ↗</a></li>
+            <li><a href="https://wa.me/+251994367526" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
+          </ul>
+        </div>
+
+        <form class="contact-form" action="https://formspree.io/f/mbgraepy" method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+          </div>
+          <button type="submit" class="send-btn">Send message</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© <span id="year"></span> Lewi Ephrem</span>
+    <span class="footer-note">Designed & built by hand</span>
+    <a href="#home">Back to top ↑</a>
+  </footer>
+
+  <script>
+    // Theme toggle
+    const root = document.documentElement;
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+      const next = root.dataset.theme === "dark" ? "light" : "dark";
+      root.dataset.theme = next;
+      localStorage.setItem("theme", next);
+    });
+
+    // Animate skill bars when the list scrolls into view
+    const skillsList = document.getElementById("skills-list");
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) =>
+        entry.target.classList.toggle("animate", entry.isIntersecting)
+      );
+    }, { threshold: 0.3 });
+    io.observe(skillsList);
+
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+/* ==========================================================
+   Design tokens — matching the system
+========================================================== */
+:root {
+  /* Light Theme */
+  --bg: #f9f9f8;
+  --surface: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --border: #e5e5e5;
+  --accent: #d94625; /* Burnt orange */
+}
+
+[data-theme="dark"] {
+  --bg: #121212;
+  --surface: #1a1a1a;
+  --text: #ededed;
+  --text-muted: #999999;
+  --border: #333333;
+  --accent: #ff5a36;
+}
+
+/* ==========================================================
+   Base & Typography
+========================================================== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .logo { font-family: "Newsreader", serif; font-weight: 400; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; height: auto; }
+
+/* ==========================================================
+   Header / Nav
+========================================================== */
+.site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 5%;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 100;
+}
+.logo { font-size: 1.25rem; font-weight: 500; letter-spacing: -0.02em; }
+.logo-dot { color: var(--accent); }
+.nav { display: flex; gap: 2rem; }
+.nav a { font-size: 0.875rem; color: var(--text-muted); transition: color 0.2s; }
+.nav a:hover, .nav a.active { color: var(--text); }
+.theme-toggle {
+  background: none; border: none; cursor: pointer; color: var(--text);
+  font-size: 1.25rem; padding: 0.5rem;
+}
+[data-theme="dark"] .icon-moon { display: none; }
+[data-theme="light"] .icon-sun { display: none; }
+
+/* ==========================================================
+   Page Layout
+========================================================== */
+.details-page { padding: 140px 5% 80px; max-width: 1400px; margin: 0 auto; }
+.page-header { max-width: 800px; margin-bottom: 80px; }
+.eyebrow {
+  font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;
+  color: var(--text-muted); margin-bottom: 1rem;
+}
+.page-header h1 {
+  font-size: clamp(3rem, 6vw, 5.5rem); line-height: 1; letter-spacing: -0.03em;
+  margin-bottom: 1.5rem;
+}
+.lede { font-size: 1.25rem; color: var(--text-muted); max-width: 60ch; }
+
+/* ==========================================================
+   Project Showcases (Asymmetric Grid)
+========================================================== */
+.showcases { display: flex; flex-direction: column; gap: 120px; }
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.showcase-visual {
+  grid-column: 1 / 8;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  padding: 1rem;
+}
+.showcase-visual img { width: 100%; border: 1px solid var(--border); }
+
+.showcase-content {
+  grid-column: 8 / 13;
+  display: flex; flex-direction: column; align-items: flex-start;
+}
+
+.reverse .showcase-visual { grid-column: 6 / 13; order: 2; }
+.reverse .showcase-content { grid-column: 1 / 6; order: 1; }
+
+.project-index {
+  font-family: "Newsreader", serif; font-size: 3rem; color: var(--border);
+  line-height: 1; margin-bottom: 1rem; font-style: italic;
+}
+.showcase-content h2 {
+  font-size: clamp(2rem, 3vw, 3rem); line-height: 1.1; letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+}
+.project-desc { color: var(--text-muted); font-size: 1.125rem; margin-bottom: 2rem; }
+
+/* ==========================================================
+   Meta Data & Features
+========================================================== */
+.project-meta {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem; margin-bottom: 2.5rem;
+}
+.project-meta h3 {
+  font-family: "Inter", sans-serif; font-size: 0.75rem; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 1rem;
+}
+.feature-list {
+  list-style: none; margin-bottom: 2rem;
+}
+.feature-list li {
+  position: relative; padding-left: 1.5rem; margin-bottom: 0.75rem;
+  color: var(--text-muted); font-size: 0.95rem;
+}
+.feature-list li::before {
+  content: "→"; position: absolute; left: 0; color: var(--accent);
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; }
+.tags li {
+  font-size: 0.75rem; padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border); border-radius: 2px;
+  color: var(--text-muted);
+}
+
+/* ==========================================================
+   Links & CTAs
+========================================================== */
+.link-arrow {
+  display: inline-flex; align-items: center; font-weight: 500; font-size: 1rem;
+  padding-bottom: 0.25rem;
+  background-image: linear-gradient(var(--accent), var(--accent));
+  background-position: 0 100%; background-repeat: no-repeat; background-size: 0% 2px;
+  transition: background-size 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s;
+}
+.link-arrow:hover { background-size: 100% 2px; color: var(--accent); }
+
+.cta-box {
+  text-align: center; padding: 100px 5%; border-top: 1px solid var(--border);
+  margin-top: 40px;
+}
+.cta-box h2 { font-size: 3rem; margin-bottom: 1rem; }
+.cta-box p { color: var(--text-muted); margin-bottom: 2rem; font-size: 1.125rem; }
+.btn-primary {
+  display: inline-flex; background: var(--text); color: var(--bg);
+  padding: 1rem 2rem; font-weight: 500; transition: transform 0.2s;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+/* ==========================================================
+   Footer
+========================================================== */
+.site-footer {
+  border-top: 1px solid var(--border); padding: 3rem 5%; background: var(--surface);
+}
+.footer-layout {
+  display: flex; justify-content: space-between; align-items: flex-end;
+}
+.footer-brand p { color: var(--text-muted); font-size: 0.875rem; margin-top: 0.5rem; }
+.footer-links a { font-size: 0.875rem; color: var(--text-muted); }
+.footer-links a:hover { color: var(--text); }
+
+/* ==========================================================
+   Responsive
+========================================================== */
+@media (max-width: 900px) {
+  .showcase { display: flex; flex-direction: column; gap: 2rem; }
+  .reverse .showcase-visual, .reverse .showcase-content { order: unset; }
+  .nav { display: none; } /* Add a mobile menu wrapper if needed */
+  .details-page { padding-top: 100px; }
+}

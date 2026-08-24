@@ -1,149 +1,98 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="no-js">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Projects by Lewi Ephrem — school management system, smart blind stick, YouTube downloader and more." />
-  <title>Projects | Lewi Ephrem</title>
-
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
-
-  <!-- Set theme before paint so there's no flash -->
-  <script>
-    (function () {
-      var saved = localStorage.getItem("theme");
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
-    })();
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="projects.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Projects</title>
+<link rel="stylesheet" href="projects.css">
 </head>
-<body id="top">
+<body>
 
-  <header class="site-header">
-    <a href="index.html" class="logo">LE<span class="logo-dot">.</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html" class="active" aria-current="page">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
-      <span class="icon-sun" aria-hidden="true">☀</span>
-      <span class="icon-moon" aria-hidden="true">☾</span>
-    </button>
-  </header>
+<a href="index.html" class="back-home">← Back to Home</a>
 
-  <main>
-    <section class="projects-page">
+<section class="projects-page">
+    <div class="projects-title">
+        <span>🚀 MY WORK</span>
+        <h1>Projects I've Built</h1>
+        <p>A collection of projects I've created while learning, experimenting, and developing my skills.</p>
+    </div>
 
-      <div class="projects-header">
-        <p class="eyebrow">Projects</p>
-        <h1>Projects I've built.</h1>
-        <p class="lede">A collection of things I've created while learning, experimenting, and developing my skills.</p>
-      </div>
+    <div class="projects-grid">
 
-      <div class="projects-grid">
+        <!-- SCHOOL MANAGEMENT SYSTEM -->
+        <div class="project-card">
+            <div class="project-image" style="background-image:url('projects/school-system.jpg');">
+                <div class="project-overlay">
+                    <span>Featured Project</span>
+                </div>
+            </div>
+            <div class="project-content">
+                <h2>🏫 School Management System</h2>
+                <p>A complete web-based school management system designed to manage students, teachers, users, marks, classes, and school resources.</p>
+                <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>PHP</span><span>MySQL</span></div>
+                <a href="#" class="project-btn">View Project →</a>
+            </div>
+        </div>
 
-        <!-- School Management System -->
-        <article class="project-card">
-          <div class="project-image">
-            <img src="projects/school-system.jpg" alt="School Management System interface" />
-          </div>
-          <div class="project-content">
-            <p class="project-tag">Featured project</p>
-            <h2>School Management System</h2>
-            <p>A complete web-based school management system designed to manage students, teachers, users, marks, classes, and school resources.</p>
-            <ul class="tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li><li>MySQL</li>
-            </ul>
-            <a href="#" class="link-arrow">View project →</a>
-          </div>
-        </article>
+        <!-- SMART BLIND STICK -->
+        <div class="project-card">
+            <div class="project-image" style="background-image:url('projects/blind-stick.jpg');">
+                <div class="project-overlay"><span>Hardware Project</span></div>
+            </div>
+            <div class="project-content">
+                <h2>🦯 Smart Blind Stick</h2>
+                <p>An Arduino-based project designed to detect obstacles and explore how hardware and programming can be used to solve practical problems.</p>
+                <div class="project-tech"><span>Arduino</span><span>C++</span><span>Hardware</span></div>
+                <a href="#" class="project-btn">View Project →</a>
+            </div>
+        </div>
 
-        <!-- Smart Blind Stick -->
-        <article class="project-card">
-          <div class="project-image">
-            <img src="projects/blind-stick.jpg" alt="Smart Blind Stick hardware" />
-          </div>
-          <div class="project-content">
-            <p class="project-tag">Hardware project</p>
-            <h2>Smart Blind Stick</h2>
-            <p>An Arduino-based project designed to detect obstacles and explore how hardware and programming can be used to solve practical problems.</p>
-            <ul class="tags">
-              <li>Arduino</li><li>C++</li><li>Hardware</li>
-            </ul>
-            <a href="#" class="link-arrow">View project →</a>
-          </div>
-        </article>
+        <!-- YOUTUBE DOWNLOADER -->
+        <div class="project-card">
+            <div class="project-image" style="background-image:url('projects/youtube-downloader.jpg');">
+                <div class="project-overlay"><span>Web Project</span></div>
+            </div>
+            <div class="project-content">
+                <h2>▶️ YouTube Downloader</h2>
+                <p>A web-based project experimenting with video downloading, frontend interfaces, and connecting a website with a Python backend.</p>
+                <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span></div>
+                <a href="#" class="project-btn">View Project →</a>
+            </div>
+        </div>
 
-        <!-- YouTube Downloader -->
-        <article class="project-card">
-          <div class="project-image">
-            <img src="projects/youtube-downloader.jpg" alt="YouTube Downloader interface" />
-          </div>
-          <div class="project-content">
-            <p class="project-tag">Web project</p>
-            <h2>YouTube Downloader</h2>
-            <p>A web-based project experimenting with video downloading, frontend interfaces, and connecting a website with a Python backend.</p>
-            <ul class="tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Python</li>
-            </ul>
-            <a href="#" class="link-arrow">View project →</a>
-          </div>
-        </article>
+        <!-- PORTFOLIO -->
+        <div class="project-card">
+            <div class="project-image" style="background-image:url('projects/portfolio.jpg');">
+                <div class="project-overlay"><span>Web Design</span></div>
+            </div>
+            <div class="project-content">
+                <h2>💻 Personal Portfolio</h2>
+                <p>A responsive personal portfolio website created to showcase my skills, projects, development journey, and contact information.</p>
+                <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                <a href="#" class="project-btn">View Project →</a>
+            </div>
+        </div>
 
-        <!-- Portfolio -->
-        <article class="project-card">
-          <div class="project-image">
-            <img src="projects/portfolio.jpg" alt="Personal portfolio website" />
-          </div>
-          <div class="project-content">
-            <p class="project-tag">Web design</p>
-            <h2>Personal Portfolio</h2>
-            <p>A responsive personal portfolio website created to showcase my skills, projects, development journey, and contact information.</p>
-            <ul class="tags">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li>
-            </ul>
-            <a href="https://thelewi.github.io/Portfolio/" target="_blank" class="link-arrow">View Website →</a>
-          </div>
-        </article>
+        <!-- MORE PROJECT -->
+        <div class="project-card">
+            <div class="project-image project-placeholder">
+                <span>🚀</span>
+            </div>
+            <div class="project-content">
+                <h2>More Projects</h2>
+                <p>More experiments and projects will be added here as I continue learning, building, and exploring new technologies.</p>
+                <div class="project-tech"><span>Learning</span><span>Building</span><span>Experimenting</span></div>
+            </div>
+        </div>
 
+    </div>
 
-
-      </div>
-
-      <div class="projects-bottom">
+    <div class="projects-bottom">
         <h2>Have a project in mind?</h2>
-        <p class="lede">Let's build something interesting together.</p>
-        <a href="contact.html" class="link-arrow">Contact me →</a>
-      </div>
+        <p>Let's build something interesting together.</p>
+        <a href="index.html#contact" class="contact-btn">🤝 Contact Me</a>
+    </div>
+</section>
 
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Lewi Ephrem</span>
-    <span class="footer-note">Designed & built by hand</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
-
-  <script>
-    // Theme toggle (shared with the other pages)
-    const root = document.documentElement;
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      const next = root.dataset.theme === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      localStorage.setItem("theme", next);
-    });
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

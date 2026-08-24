@@ -1,232 +1,502 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="no-js">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lewi Ephrem — skills and technologies: HTML, CSS, JavaScript, PHP, MySQL, Python, C++/Arduino, Git and UI/UX." />
-  <title>Skills | Lewi Ephrem</title>
-
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
-
-  <!-- Set theme before paint so there's no flash -->
-  <script>
-    (function () {
-      var saved = localStorage.getItem("theme");
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
-    })();
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="skills.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Skills | Lewi Ephrem</title>
+<link rel="stylesheet" href="skills.css">
 </head>
+
 <body>
 
-  <header class="site-header">
-    <a href="index.html" class="logo">LE<span class="logo-dot">.</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html" class="active" aria-current="page">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
-      <span class="icon-sun" aria-hidden="true">☀</span>
-      <span class="icon-moon" aria-hidden="true">☾</span>
-    </button>
-  </header>
+<a href="index.html" class="back-home">← Back to Home</a>
 
-  <main>
-    <section class="skills-page">
+<section class="skills-page">
 
-      <div class="skills-header">
-        <p class="eyebrow">Skills</p>
-        <h1>What I can do.</h1>
-        <p class="lede">A detailed look at the technologies, tools, and areas I've been learning and working with.</p>
-      </div>
+    <div class="skills-header">
+        <span>🧠 MY SKILLS</span>
+        <h1>What I Can Do</h1>
+        <p>
+            A detailed look at the technologies, tools, and areas
+            I have been learning and working with.
+        </p>
+    </div>
 
-      <!-- 01 HTML -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">01</span> HTML</h2>
-          <p>Building the structure and foundation of websites.</p>
-          <strong class="skill-overall">90%</strong>
+    <!-- HTML -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">01</span>
+                <h2>🌐 HTML</h2>
+                <p>Building the structure and foundation of websites.</p>
+            </div>
+            <strong>90%</strong>
         </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Semantic HTML</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Forms & Inputs</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Page Structure</span><strong>95%</strong></div><div class="bar"><span class="fill" style="--w: 95%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Accessibility Basics</span><strong>70%</strong></div><div class="bar"><span class="fill" style="--w: 70%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Semantic HTML</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
 
-      <!-- 02 CSS -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">02</span> CSS</h2>
-          <p>Designing responsive, modern, and interactive interfaces.</p>
-          <strong class="skill-overall">50%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Forms & Inputs</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Page Structure</span>
+                    <strong>95%</strong>
+                </div>
+                <div class="bar"><div style="--width:95%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Accessibility Basics</span>
+                    <strong>70%</strong>
+                </div>
+                <div class="bar"><div style="--width:70%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- CSS -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">02</span>
+                <h2>🎨 CSS</h2>
+                <p>Designing responsive, modern, and interactive interfaces.</p>
+            </div>
+            <strong>50%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Layouts & Flexbox</span><strong>65%</strong></div><div class="bar"><span class="fill" style="--w: 65%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>CSS Grid</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Responsive Design</span><strong>60%</strong></div><div class="bar"><span class="fill" style="--w: 60%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Animations & Transitions</span><strong>50%</strong></div><div class="bar"><span class="fill" style="--w: 50%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>UI Styling</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Layouts & Flexbox</span>
+                    <strong>65%</strong>
+                </div>
+                <div class="bar"><div style="--width:65%"></div></div>
+            </div>
 
-      <!-- 03 JavaScript -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">03</span> JavaScript</h2>
-          <p>Adding interaction and dynamic behavior to websites.</p>
-          <strong class="skill-overall">50%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>CSS Grid</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Responsive Design</span>
+                    <strong>60%</strong>
+                </div>
+                <div class="bar"><div style="--width:60%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Animations & Transitions</span>
+                    <strong>50%</strong>
+                </div>
+                <div class="bar"><div style="--width:50%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>UI Styling</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">03</span>
+                <h2>⚡ JavaScript</h2>
+                <p>Adding interaction and dynamic behavior to websites.</p>
+            </div>
+            <strong>50%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>DOM Manipulation</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Events</span><strong>60%</strong></div><div class="bar"><span class="fill" style="--w: 60%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Interactive UI</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Fetch / APIs</span><strong>35%</strong></div><div class="bar"><span class="fill" style="--w: 35%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>DOM Manipulation</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
 
-      <!-- 04 PHP -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">04</span> PHP</h2>
-          <p>Building backend logic and dynamic web applications.</p>
-          <strong class="skill-overall">95%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Events</span>
+                    <strong>60%</strong>
+                </div>
+                <div class="bar"><div style="--width:60%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Interactive UI</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Fetch / APIs</span>
+                    <strong>35%</strong>
+                </div>
+                <div class="bar"><div style="--width:35%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- PHP -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">04</span>
+                <h2>🐘 PHP</h2>
+                <p>Building backend logic and dynamic web applications.</p>
+            </div>
+            <strong>95%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Form Handling</span><strong>95%</strong></div><div class="bar"><span class="fill" style="--w: 95%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Sessions & Authentication</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>CRUD Systems</span><strong>95%</strong></div><div class="bar"><span class="fill" style="--w: 95%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Database Integration</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Role-Based Systems</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Form Handling</span>
+                    <strong>95%</strong>
+                </div>
+                <div class="bar"><div style="--width:95%"></div></div>
+            </div>
 
-      <!-- 05 MySQL -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">05</span> MySQL</h2>
-          <p>Designing databases and working with stored information.</p>
-          <strong class="skill-overall">80%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Sessions & Authentication</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>CRUD Systems</span>
+                    <strong>95%</strong>
+                </div>
+                <div class="bar"><div style="--width:95%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Database Integration</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Role-Based Systems</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- MYSQL -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">05</span>
+                <h2>🗄️ MySQL</h2>
+                <p>Designing databases and working with stored information.</p>
+            </div>
+            <strong>80%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Table Design</span><strong>85%</strong></div><div class="bar"><span class="fill" style="--w: 85%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>SELECT / INSERT / UPDATE / DELETE</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>JOINs</span><strong>80%</strong></div><div class="bar"><span class="fill" style="--w: 80%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Relationships</span><strong>75%</strong></div><div class="bar"><span class="fill" style="--w: 75%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Database Optimization</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Table Design</span>
+                    <strong>85%</strong>
+                </div>
+                <div class="bar"><div style="--width:85%"></div></div>
+            </div>
 
-      <!-- 06 Python -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">06</span> Python</h2>
-          <p>Learning programming, automation, and application logic.</p>
-          <strong class="skill-overall">75%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>SELECT / INSERT / UPDATE / DELETE</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>JOINs</span>
+                    <strong>80%</strong>
+                </div>
+                <div class="bar"><div style="--width:80%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Relationships</span>
+                    <strong>75%</strong>
+                </div>
+                <div class="bar"><div style="--width:75%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Database Optimization</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- PYTHON -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">06</span>
+                <h2>🐍 Python</h2>
+                <p>Learning programming, automation, and application logic.</p>
+            </div>
+            <strong>75%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Variables & Data Types</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Functions</span><strong>80%</strong></div><div class="bar"><span class="fill" style="--w: 80%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Loops & Conditions</span><strong>90%</strong></div><div class="bar"><span class="fill" style="--w: 90%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Lists & Dictionaries</span><strong>75%</strong></div><div class="bar"><span class="fill" style="--w: 75%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>File Handling</span><strong>65%</strong></div><div class="bar"><span class="fill" style="--w: 65%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Automation</span><strong>60%</strong></div><div class="bar"><span class="fill" style="--w: 60%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Variables & Data Types</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
 
-      <!-- 07 C++ / Arduino -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">07</span> C++ / Arduino</h2>
-          <p>Working with hardware and embedded programming.</p>
-          <strong class="skill-overall">55%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Functions</span>
+                    <strong>80%</strong>
+                </div>
+                <div class="bar"><div style="--width:80%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Loops & Conditions</span>
+                    <strong>90%</strong>
+                </div>
+                <div class="bar"><div style="--width:90%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Lists & Dictionaries</span>
+                    <strong>75%</strong>
+                </div>
+                <div class="bar"><div style="--width:75%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>File Handling</span>
+                    <strong>65%</strong>
+                </div>
+                <div class="bar"><div style="--width:65%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Automation</span>
+                    <strong>60%</strong>
+                </div>
+                <div class="bar"><div style="--width:60%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- C++ / ARDUINO -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">07</span>
+                <h2>🔧 C++ / Arduino</h2>
+                <p>Working with hardware and embedded programming.</p>
+            </div>
+            <strong>55%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>C++ Basics</span><strong>60%</strong></div><div class="bar"><span class="fill" style="--w: 60%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Arduino Programming</span><strong>60%</strong></div><div class="bar"><span class="fill" style="--w: 60%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Sensors</span><strong>50%</strong></div><div class="bar"><span class="fill" style="--w: 50%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Hardware Projects</span><strong>50%</strong></div><div class="bar"><span class="fill" style="--w: 50%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>C++ Basics</span>
+                    <strong>60%</strong>
+                </div>
+                <div class="bar"><div style="--width:60%"></div></div>
+            </div>
 
-      <!-- 08 Git & GitHub -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">08</span> Git & GitHub</h2>
-          <p>Managing source code and project versions.</p>
-          <strong class="skill-overall">60%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Arduino Programming</span>
+                    <strong>60%</strong>
+                </div>
+                <div class="bar"><div style="--width:60%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Sensors</span>
+                    <strong>50%</strong>
+                </div>
+                <div class="bar"><div style="--width:50%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Hardware Projects</span>
+                    <strong>50%</strong>
+                </div>
+                <div class="bar"><div style="--width:50%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- GIT -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">08</span>
+                <h2>🐙 Git & GitHub</h2>
+                <p>Managing source code and project versions.</p>
+            </div>
+            <strong>60%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Repositories</span><strong>70%</strong></div><div class="bar"><span class="fill" style="--w: 70%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Commits</span><strong>70%</strong></div><div class="bar"><span class="fill" style="--w: 70%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Branches</span><strong>50%</strong></div><div class="bar"><span class="fill" style="--w: 50%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Version Control Workflow</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
-        </div>
-      </section>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Repositories</span>
+                    <strong>70%</strong>
+                </div>
+                <div class="bar"><div style="--width:70%"></div></div>
+            </div>
 
-      <!-- 09 UI / UX -->
-      <section class="skill-section">
-        <div class="skill-head">
-          <h2><span class="skill-number">09</span> UI / UX</h2>
-          <p>Designing interfaces that are clear and enjoyable to use.</p>
-          <strong class="skill-overall">60%</strong>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Commits</span>
+                    <strong>70%</strong>
+                </div>
+                <div class="bar"><div style="--width:70%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Branches</span>
+                    <strong>50%</strong>
+                </div>
+                <div class="bar"><div style="--width:50%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Version Control Workflow</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
         </div>
+    </div>
+
+    <!-- UI/UX -->
+    <div class="skill-section">
+        <div class="skill-heading">
+            <div>
+                <span class="skill-number">09</span>
+                <h2>🎨 UI / UX</h2>
+                <p>Designing interfaces that are clear and enjoyable to use.</p>
+            </div>
+            <strong>60%</strong>
+        </div>
+
         <div class="subskills">
-          <div class="subskill"><div class="subskill-info"><span>Layout Design</span><strong>65%</strong></div><div class="bar"><span class="fill" style="--w: 65%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Color & Typography</span><strong>60%</strong></div><div class="bar"><span class="fill" style="--w: 60%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>Responsive UI</span><strong>65%</strong></div><div class="bar"><span class="fill" style="--w: 65%"></span></div></div>
-          <div class="subskill"><div class="subskill-info"><span>User Experience</span><strong>55%</strong></div><div class="bar"><span class="fill" style="--w: 55%"></span></div></div>
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Layout Design</span>
+                    <strong>65%</strong>
+                </div>
+                <div class="bar"><div style="--width:65%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Color & Typography</span>
+                    <strong>60%</strong>
+                </div>
+                <div class="bar"><div style="--width:60%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>Responsive UI</span>
+                    <strong>65%</strong>
+                </div>
+                <div class="bar"><div style="--width:65%"></div></div>
+            </div>
+
+            <div class="subskill">
+                <div class="subskill-info">
+                    <span>User Experience</span>
+                    <strong>55%</strong>
+                </div>
+                <div class="bar"><div style="--width:55%"></div></div>
+            </div>
         </div>
-      </section>
+    </div>
 
-      <div class="skills-bottom">
-        <h2>Always learning.</h2>
-        <p>My skill levels reflect where I am today — not where I plan to stop.</p>
-        <a href="index.html" class="link-arrow">← Back to home</a>
-      </div>
+    <div class="skills-bottom">
+        <h2>Always learning. Always building. 🚀</h2>
+        <p>My skill levels represent where I am currently, not where I plan to stop.</p>
+        <a href="index.html" class="home-btn">← Back to Home</a>
+    </div>
 
-    </section>
-  </main>
+</section>
 
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Lewi Ephrem</span>
-    <span class="footer-note">Designed & built by hand</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
+<script>
+const sections = document.querySelectorAll(".skill-section");
 
-  <script>
-    // Theme toggle (shared with index.html via localStorage)
-    const root = document.documentElement;
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      const next = root.dataset.theme === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      localStorage.setItem("theme", next);
-    });
-
-    // Reveal each skill section once, when it scrolls into view
-    const sections = document.querySelectorAll(".skill-section");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add("show");
-          observer.unobserve(entry.target);
+            entry.target.classList.add("show");
         }
-      });
-    }, { threshold: 0.15 });
+    });
+}, { threshold: 0.2 });
 
-    sections.forEach((section) => observer.observe(section));
+sections.forEach(section => observer.observe(section));
+</script>
 
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

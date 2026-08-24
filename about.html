@@ -1,181 +1,297 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" class="no-js">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="About Lewi Ephrem — a student and developer who enjoys turning ideas into real projects and learning by building." />
-  <title>About Me | Lewi Ephrem</title>
 
-  <script>document.documentElement.classList.replace("no-js", "js");</script>
+    <meta charset="UTF-8">
 
-  <!-- Set theme before paint so there's no flash -->
-  <script>
-    (function () {
-      var saved = localStorage.getItem("theme");
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
-    })();
-  </script>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="about.css" />
+    <title>About Me | Lewi Ephrem</title>
+
+    <link rel="stylesheet" href="about.css">
+
 </head>
-<body id="top">
 
-  <header class="site-header">
-    <a href="index.html" class="logo">LE<span class="logo-dot">.</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html" class="active" aria-current="page">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
-      <span class="icon-sun" aria-hidden="true">☀</span>
-      <span class="icon-moon" aria-hidden="true">☾</span>
-    </button>
-  </header>
+<body>
 
-  <main>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">About me</p>
-        <h1>I'm Lewi<br /><em>Ephrem.</em></h1>
-        <p class="lede">
-          A student and developer who enjoys turning ideas into real
-          projects and learning through building.
+<!-- =========================================================
+     BACK TO HOME
+========================================================= -->
+
+<div class="top-bar">
+    <a href="index.html" class="back-home"> ← Back to Home </a>
+</div>
+
+
+
+<!-- =========================================================
+     ABOUT HERO
+========================================================= -->
+
+<section class="about-hero">
+
+    <div class="about-hero-content">
+
+        <span class="about-label">
+            👋 ABOUT ME
+        </span>
+
+        <h1>
+            I'm <span>Lewi Ephrem.</span>
+        </h1>
+
+        <p>
+            A student and developer who enjoys turning
+            ideas into real projects and learning through
+            building.
         </p>
-      </div>
-      <div class="hero-portrait">
-        <figure class="portrait">
-          <img src="assets/my.jpg" alt="Portrait of Lewi Ephrem" />
-        </figure>
-      </div>
-    </section>
 
-    <!-- 01 Who I am -->
-    <section class="section">
-      <p class="eyebrow">01 — Who I am</p>
-      <div class="split">
-        <h2>A curious developer who enjoys building things.</h2>
-        <div class="prose">
-          <p>Hi, I'm <strong>Lewi Ephrem</strong>. I'm a student and developer interested in web development, programming, UI/UX design, and technology.</p>
-          <p>I enjoy taking ideas and turning them into real projects that I can see, test, improve, and actually use.</p>
-          <p>Most of the projects I work on start with curiosity. I see something interesting and think:</p>
-          <blockquote>"What if I tried to build this?"</blockquote>
-          <p>That curiosity motivates me to keep learning and experimenting with new ideas.</p>
+    </div>
+
+
+    <div class="about-hero-image">
+
+        <div class="image-glow"></div>
+
+        <img
+            src="my.jpg"
+            alt="Lewi Ephrem"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WHO I AM
+========================================================= -->
+
+<section class="about-section">
+
+    <span class="section-label">
+        01 — WHO I AM
+    </span>
+
+    <div class="about-content">
+
+        <h2>
+            A curious developer
+            who enjoys building things.
+        </h2>
+
+        <p>
+            Hi, I'm <strong>Lewi Ephrem</strong>.
+            I'm a student and developer interested in
+            web development, programming, UI/UX design,
+            and technology.
+        </p>
+
+        <p>
+            I enjoy taking ideas and turning them into
+            real projects that I can see, test, improve,
+            and actually use.
+        </p>
+
+        <p>
+            Most of the projects I work on start with
+            curiosity. I see something interesting and
+            think:
+        </p>
+
+        <blockquote>
+            "What if I tried to build this?"
+        </blockquote>
+
+        <p>
+            That curiosity motivates me to keep learning
+            and experimenting with new ideas.
+        </p>
+
+    </div>
+
+</section>
+<!-- =========================================================
+     WHAT I ENJOY
+========================================================= -->
+<section class="about-section dark-section">
+    <span class="section-label"> 02 — WHAT I ENJOY </span>
+    <h2 class="section-title"> Things I enjoy doing. </h2>
+    <div class="about-grid">
+        <div class="about-card">
+            <div class="card-icon">
+                💻
+            </div>
+            <h3> Building Websites </h3>
+            <p>
+                I enjoy creating websites and interfaces
+                and watching them develop from simple ideas
+                into complete projects.
+            </p>
         </div>
-      </div>
-    </section>
+        <div class="about-card">
+            <div class="card-icon">
+                🎨
+            </div>
+            <h3>UI & UX</h3>
+            <p>
+                I like experimenting with layouts, colors,
+                animations, glass effects and modern
+                interfaces.
+            </p>
 
-    <!-- 02 What I enjoy -->
-    <section class="section">
-      <p class="eyebrow">02 — What I enjoy</p>
-      <h2>Things I enjoy doing.</h2>
-      <div class="card-grid">
-        <article class="card">
-          <span class="card-num">01</span>
-          <h3>Building Websites</h3>
-          <p>I enjoy creating websites and interfaces and watching them develop from simple ideas into complete projects.</p>
-        </article>
-        <article class="card">
-          <span class="card-num">02</span>
-          <h3>UI & UX</h3>
-          <p>I like experimenting with layouts, colors, animations, glass effects and modern interfaces.</p>
-        </article>
-        <article class="card">
-          <span class="card-num">03</span>
-          <h3>Problem Solving</h3>
-          <p>When something doesn't work, I enjoy finding the problem and figuring out how to fix it.</p>
-        </article>
-        <article class="card">
-          <span class="card-num">04</span>
-          <h3>Experimenting</h3>
-          <p>I like trying new technologies and combining different ideas to create interesting projects.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- 03 How I learn -->
-    <section class="section">
-      <p class="eyebrow">03 — How I learn</p>
-      <div class="split">
-        <h2>I learn by building.</h2>
-        <div class="prose">
-          <p>I learn best when I can take an idea and actually build something with it.</p>
-          <p>Instead of only studying tutorials, I like starting with a project and learning what I need along the way.</p>
-          <p>Sometimes things work immediately. Sometimes they don't.</p>
-          <p>When something breaks, I try to understand <strong>why</strong> it happened and how I can fix it.</p>
-          <p>Those problems often teach me more than simply following a tutorial.</p>
         </div>
-      </div>
-    </section>
+        <div class="about-card">
+            <div class="card-icon">
+                🧠
+            </div>
+            <h3> Problem Solving </h3>
 
-    <!-- 04 My mindset -->
-    <section class="section">
-      <p class="eyebrow">04 — My mindset</p>
-      <div class="split">
+            <p>
+                When something doesn't work, I enjoy
+                finding the problem and figuring out
+                how to fix it.
+            </p>
+        </div>
+        <div class="about-card">
+            <div class="card-icon">
+                🔧
+            </div>
+            <h3>
+                Experimenting
+            </h3>
+            <p>
+                I like trying new technologies and
+                combining different ideas to create
+                interesting projects.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- =========================================================
+     HOW I LEARN
+========================================================= -->
+<section class="about-section">
+    <span class="section-label">
+        03 — HOW I LEARN
+    </span>
+    <div class="learning-content">
+        <h2> I learn by building. </h2>
+        <p>
+            I learn best when I can take an idea and
+            actually build something with it.
+        </p>
+        <p>
+            Instead of only studying tutorials, I like
+            starting with a project and learning what
+            I need along the way.
+        </p>
+        <p>
+            Sometimes things work immediately.
+            Sometimes they don't.
+        </p>
+        <p>
+            When something breaks, I try to understand
+            <strong>why</strong> it happened and how
+            I can fix it.
+        </p>
+        <p>
+            Those problems often teach me more than
+            simply following a tutorial.
+        </p>
+    </div>
+</section>
+<!-- =========================================================
+     MY MINDSET
+========================================================= -->
+<section class="about-section dark-section">
+    <span class="section-label"> 04 — MY MINDSET </span>
+    <div class="mindset">
         <div>
-          <h2>Code is only part of the process.</h2>
-          <div class="prose">
-            <p>I believe good development isn't only about writing code.</p>
-            <p>It's also about understanding the problem, thinking creatively and considering the person who will actually use the application.</p>
-            <p>That's one of the reasons I'm interested in both <strong>development and UI/UX.</strong></p>
-          </div>
+            <h2>Code is only part of the process.</h2>
+            <p>
+                I believe good development isn't only
+                about writing code.
+            </p>
+            <p>
+                It's also about understanding the problem,
+                thinking creatively and considering the
+                person who will actually use the application.
+            </p>
+            <p>
+                That's one of the reasons I'm interested
+                in both <strong>development and UI/UX.</strong>
+            </p>
         </div>
-        <aside class="quote-card">
-          <p>Build things.<br />Break things.<br />Learn from them.<br />Build again.</p>
-        </aside>
-      </div>
-    </section>
-
-    <!-- 05 What I'm working toward -->
-    <section class="section">
-      <p class="eyebrow">05 — What I'm working toward</p>
-      <div class="split">
+        <div class="quote-card">
+            <span>💡</span>
+            <p>
+                Build things.<br>
+                Break things.<br>
+                Learn from them.<br>
+                Build again.
+            </p>
+        </div>
+    </div>
+</section>
+<!-- =========================================================
+     FUTURE
+========================================================= -->
+<section class="about-section">
+    <span class="section-label"> 05 — WHAT I'M WORKING TOWARD </span>
+    <div class="future-content">
         <h2>I'm just getting started.</h2>
-        <div class="prose">
-          <p>My goal is to continue improving as a developer and eventually become capable of building larger and more advanced applications from start to finish.</p>
-          <p>I want to continue improving my programming, web development, UI/UX, databases, backend development and other areas of technology.</p>
-          <p>Most importantly, I want to keep building projects that aren't only interesting to create, but can also be <strong>useful to real people.</strong></p>
-        </div>
-      </div>
-    </section>
+        <p>
+            My goal is to continue improving as a developer
+            and eventually become capable of building larger
+            and more advanced applications from start to finish.
+        </p>
+        <p>
+            I want to continue improving my programming,
+            web development, UI/UX, databases, backend
+            development and other areas of technology.
+        </p>
+        <p>
+            Most importantly, I want to keep building
+            projects that aren't only interesting to create,but can also be <strong>useful to real people.</strong>
+        </p>
+    </div>
+</section>
+<!-- =========================================================
+     FINAL BUTTONS
+========================================================= -->
+<section class="about-end">
+    <h2>Want to see what I've built?</h2>
+    <p> Check out my projects or get in touch with me.</p>
+    <div class="end-buttons">
+        <a href="index.html#projects" class="end-btn project-btn">
+            🚀 View Projects
+        </a>
+        <a href="index.html#contact" class="end-btn contact-btn">
+            🤝 Contact Me
+        </a>
+    </div>
+</section>
+<!-- =========================================================
+     BACK TO HOME
+========================================================= -->
 
-    <!-- CTA -->
-    <section class="section cta">
-      <h2>Want to see what I've built?</h2>
-      <p class="lede">Check out my projects or get in touch with me.</p>
-      <div class="hero-actions">
-        <a href="projects.html" class="link-arrow">View projects →</a>
-       <a href="contact.html" class="link-arrow">Contact me →</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Lewi Ephrem</span>
-    <span class="footer-note">Designed & built by hand</span>
-    <a href="#top">Back to top ↑</a>
-  </footer>
-
-  <script>
-    // Theme toggle (shared with the other pages)
-    const root = document.documentElement;
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      const next = root.dataset.theme === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      localStorage.setItem("theme", next);
-    });
-
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <div>
+        <a href="index.html" class="back-home"> ← Back to Home </a>
+    </div>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer>
+    <p>
+        © 2026 Lewi Ephrem
+    </p>
+</footer>
 </body>
 </html>

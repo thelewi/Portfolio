@@ -1,240 +1,746 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lewi Ephrem — web developer and student building clean, responsive websites, management systems and creative digital projects." />
-  <title>Lewi Ephrem — Web Developer</title>
 
-  <!-- Set theme before paint so there's no flash of the wrong theme -->
-  <script>
-    (function () {
-      var saved = localStorage.getItem("theme");
-      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      document.documentElement.dataset.theme = saved || (prefersDark ? "dark" : "light");
-    })();
-  </script>
+    <meta charset="UTF-8">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Lewi Ephrem | Web Developer</title>
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-  <header class="site-header">
-    <a href="#home" class="logo">LE<span class="logo-dot">.</span></a>
-    <nav class="nav" aria-label="Primary">
-      <a href="index.html" class="active" aria-current="page">Home</a>
-      <a href="about.html">About</a>
-      <a href="skills.html">Skills</a>
-      <a href="projects.html">Projects</a>
-      <a href="contact.html">Contact</a>
+
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li>
+                <a href="#home">Home</a>
+            </li>
+
+            <li>
+                <a href="#about">About</a>
+            </li>
+
+            <li>
+                <a href="#skill">Skills</a>
+            </li>
+
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
+
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
+
+        </ul>
+
     </nav>
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle color theme">
-      <span class="icon-sun" aria-hidden="true">☀</span>
-      <span class="icon-moon" aria-hidden="true">☾</span>
-    </button>
-  </header>
 
-  <main>
 
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-copy">
-        <p class="eyebrow">Web Developer · Student · Creator</p>
-        <h1>Hey, I'm Lewi.<br /><em>I build for the web.</em></h1>
-        <p class="lede">
-          Clean, responsive websites, management systems and creative digital
-          projects — built by learning, experimenting and shipping.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="link-arrow">See my work →</a>
-          <a href="contact.html" class="link-arrow">Let's talk →</a>
+    <!-- =====================================================
+         HOME
+    ====================================================== -->
+
+    <section class="home" id="home">
+
+        <div class="home-content">
+
+            <span class="home-greeting">
+                👋 Hi, I'm
+            </span>
+
+            <h1>
+                Lewi Ephrem
+            </h1>
+
+            <h3>
+                Web Developer
+                <span>•</span>
+                Student
+                <span>•</span>
+                Creator
+            </h3>
+
+            <p>
+                I build clean, responsive and user-friendly websites,
+                management systems and creative digital projects.
+            </p>
+
+
+            <div class="home-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn primary-btn"
+                >
+                    View My Work 🚀
+                </a>
+
+                <a
+                    href="#contact"
+                    class="btn secondary-btn">
+                    Let's Connect 🤝
+                </a>
+            </div>
+        </div>
+        <div class="home-image">
+            <div class="profile-glow"></div>
+            <div class="profile-circle">
+                <img src="assets/my.jpg" alt="Lewi Ephrem">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
+
+    <section
+        class="abouts"
+        id="about"
+    >
+
+        <div class="about">
+
+
+            <div class="about-content">
+
+                <h2>
+                    👋 About Me
+                </h2>
+
+                <p>
+                    Hi, I’m <strong>Lewi</strong> — a curious developer
+                    who enjoys turning ideas into real, useful
+                    experiences. 💡
+                </p>
+
+                <p>
+                    I’m passionate about
+                    <strong>
+                        web development, programming,
+                        and creative projects
+                    </strong>
+                    💻. I enjoy learning by building,
+                    experimenting with new technologies,
+                    solving problems, and continuously
+                    improving my skills. 🚀
+                </p>
+
+                <p>
+                    I believe good development isn’t just about
+                    writing code — it’s about
+                    <strong> understanding problems, thinking creatively,and building things people can actually use.</strong>
+                    🧠✨
+                </p>
+                <a href="about.html" class="btn primary-btn" >
+                    Wanna Know More →
+                </a>
+            </div>
+            <div class="about-image">
+                <div class="about-image-glow"></div>
+                <img src="assets/my.jpg" alt="Lewi Ephrem">
+
+            </div>
 
         </div>
-      </div>
-      <div class="hero-portrait">
-        <figure class="portrait">
-          <img src="assets/my.jpg" alt="Portrait of Lewi Ephrem" />
-        </figure>
-      </div>
+
     </section>
 
-    <!-- About -->
-    <section class="section" id="about">
-      <p class="eyebrow">About</p>
-      <h2>A curious developer<br />who builds by doing.</h2>
-      <div class="section-body">
-        <p>
-          I'm Lewi — I enjoy turning ideas into real, useful experiences.
-          I'm passionate about <strong>web development, programming and
-          creative projects</strong>, and I learn best by building.
-        </p>
-        <p>
-          For me, good development isn't just code. It's understanding the
-          problem, thinking creatively, and shipping things people can
-          actually use.
-        </p>
-        <dl class="facts">
-          <div><dt>Status</dt><dd>Student & web developer</dd></div>
-          <div><dt>Focus</dt><dd>Web apps, tools, creative projects</dd></div>
-          <div><dt>Stack</dt><dd>PHP, MySQL, Python, JavaScript</dd></div>
-        </dl>
-      </div>
-    </section>
 
-    <!-- Skills -->
-    <section class="section" id="skills">
-      <p class="eyebrow">Skills</p>
-      <h2>Tools I work with.</h2>
-      <div class="section-body">
-        <p class="lede">Technologies I've been learning and using — honest self-ratings, real proof in the projects below.</p>
+    <!-- =====================================================
+         SKILLS
+    ====================================================== -->
 
-        <div class="skills-list" id="skills-list">
-          <div class="skill">
-            <div class="skill-top"><span>PHP</span><span class="skill-pct">95%</span></div>
-            <div class="bar"><span class="fill" style="--w: 95%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>HTML</span><span class="skill-pct">90%</span></div>
-            <div class="bar"><span class="fill" style="--w: 90%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>MySQL</span><span class="skill-pct">80%</span></div>
-            <div class="bar"><span class="fill" style="--w: 80%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>Python</span><span class="skill-pct">75%</span></div>
-            <div class="bar"><span class="fill" style="--w: 75%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>CSS</span><span class="skill-pct">50%</span></div>
-            <div class="bar"><span class="fill" style="--w: 50%"></span></div>
-          </div>
-          <div class="skill">
-            <div class="skill-top"><span>JavaScript</span><span class="skill-pct">50%</span></div>
-            <div class="bar"><span class="fill" style="--w: 50%"></span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="skills-section" id="skill">
 
-    <!-- Projects -->
-    <section class="section" id="projects">
-      <p class="eyebrow">Projects</p>
-      <h2>Things I've built.</h2>
+    <div class="skills-content">
 
-      <div class="projects">
-        <article class="project">
-          <span class="project-index">01</span>
-          <div class="project-main">
-            <h3><a href="projects.html">School Management System</a></h3>
-            <p>A web-based system for managing students, teachers, marks, users and school information.</p>
-            <ul class="tags">
-              <li>HTML</li><li>CSS</li><li>PHP</li><li>JavaScript</li><li>MySQL</li>
-            </ul>
-          </div>
-          <a class="project-link" href="projects.html" aria-label="School Management System">↗</a>
-        </article>
-
-        <article class="project">
-          <span class="project-index">02</span>
-          <div class="project-main">
-            <h3><a href="projects.html">Smart Blind Stick</a></h3>
-            <p>An Arduino-based stick that detects obstacles and helps the user navigate safely.</p>
-            <ul class="tags">
-              <li>Arduino</li><li>C++</li>
-            </ul>
-          </div>
-          <a class="project-link" href="projects.html" aria-label="Smart Blind Stick">↗</a>
-        </article>
-
-        <article class="project">
-          <span class="project-index">03</span>
-          <div class="project-main">
-            <h3><a href="projects.html">YouTube Downloader</a></h3>
-            <p>A tool for downloading YouTube videos through a web interface with a Python backend.</p>
-            <ul class="tags">
-              <li>Python</li>
-            </ul>
-          </div>
-          <a class="project-link" href="projects.html" aria-label="YouTube Downloader">↗</a>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <p class="eyebrow">Contact</p>
-      <h2>Let's work together.</h2>
-
-      <div class="contact-grid">
-        <div class="contact-info">
-          <p class="lede">
-            Have a project idea, a question, or an opportunity?
-            Send me a message — I'll get back to you.
-          </p>
-          <ul class="socials">
-            <li><a href="https://github.com/thelewi" target="_blank" rel="noopener noreferrer">GitHub ↗</a></li>
-            <li><a href="https://www.linkedin.com/in/itzthelewi/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></li>
-            <li><a href="https://www.instagram.com/itz.thelewi/" target="_blank" rel="noopener noreferrer">Instagram ↗</a></li>
-            <li><a href="https://www.youtube.com/@LewiEphrem" target="_blank" rel="noopener noreferrer">YouTube ↗</a></li>
-            <li><a href="https://t.me/lewiep" target="_blank" rel="noopener noreferrer">Telegram ↗</a></li>
-            <li><a href="https://wa.me/+251994367526" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></li>
-          </ul>
+        <div class="skills-title">
+            <h2>💻 My Skills</h2>
+            <p>Technologies and tools I have been learning and working with.</p>
         </div>
 
-        <form class="contact-form" action="https://formspree.io/f/mbgraepy" method="POST">
-          <div class="form-group">
-            <label for="name">Your Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required />
-          </div>
-          <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="What is this about?" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
-          </div>
-          <button type="submit" class="send-btn">Send message</button>
+
+        <div class="skills-list">
+
+            <!-- HTML -->
+            <div class="skill-item">
+
+                <div class="skill-info">
+                    <span>HTML</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="--width: 90%;"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <!-- CSS -->
+            <div class="skill-item">
+
+                <div class="skill-info">
+                    <span>CSS</span>
+                    <span>50%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="--width: 50%;"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript -->
+            <div class="skill-item">
+
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span>50%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="--width: 50%;"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <!-- Python -->
+            <div class="skill-item">
+
+                <div class="skill-info">
+                    <span>Python</span>
+                    <span>75%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="--width: 75%;"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <!-- MySQL -->
+            <div class="skill-item">
+
+                <div class="skill-info">
+                    <span>MySQL</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="--width: 80%;"
+                    ></div>
+                </div>
+
+            </div>
+
+
+            <!-- PHP -->
+            <div class="skill-item">
+
+                <div class="skill-info">
+                    <span>PHP</span>
+                    <span>95%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div
+                        class="skill-progress"
+                        style="--width: 95%;"
+                    ></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <a href="skills.html" class="skills-more-btn">
+            View All Skills →
+        </a>
+
+    </div>
+
+</section>
+
+
+    <!-- =====================================================
+         PROJECTS
+    ====================================================== -->
+
+    <section
+        class="projects"
+        id="projects"
+    >
+
+
+        <div class="projects-title">
+
+            <h2>
+                🚀 My Projects
+            </h2>
+
+            <p>
+                A few things I've built while learning
+                and experimenting.
+            </p>
+
+        </div>
+
+
+        <div class="projects-container">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="card-container">
+
+                <div class="card">
+
+
+                    <div
+                        class="card-face front"
+                        style="
+                            background-image:
+                            url('projects/school-system.jpg');
+                        "
+                    >
+
+                        <div class="front-content">
+
+                            <h2>
+                                🏫 School Management System
+                            </h2>
+
+                            <p>
+                                A complete school management system.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-face back">
+
+                        <h2>
+                            School Management System
+                        </h2>
+
+                        <p>
+                            A web-based system for managing
+                            students, teachers, marks, users
+                            and school information.
+                        </p>
+
+
+                        <div class="project-tech">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>PHP</span>
+                            <span>JavaScript</span>
+                            <span>MySQL</span>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="project-btn"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="card-container">
+
+                <div class="card">
+
+
+                    <div
+                        class="card-face front"
+                        style="
+                            background-image:
+                            url('projects/blind-stick.jpg');
+                        "
+                    >
+
+                        <div class="front-content">
+
+                            <h2>
+                                🦯 Smart Blind Stick
+                            </h2>
+
+                            <p>
+                                An Arduino-based project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-face back">
+
+                        <h2>
+                            Smart Blind Stick
+                        </h2>
+
+                        <p>
+                            A smart stick project designed
+                            to detect obstacles using Arduino.
+                        </p>
+
+
+                        <div class="project-tech">
+
+                            <span>Arduino</span>
+                            <span>C++</span>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="project-btn"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="card-container">
+
+                <div class="card">
+
+
+                    <div
+                        class="card-face front"
+                        style="
+                            background-image:
+                            url('projects/youtube-downloader.jpg');
+                        "
+                    >
+
+                        <div class="front-content">
+
+                            <h2>
+                                ▶️ YouTube Downloader
+                            </h2>
+
+                            <p>
+                                A video downloading project.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="card-face back">
+
+                        <h2>
+                            YouTube Downloader
+                        </h2>
+
+                        <p>
+                            A project for downloading
+                            YouTube videos using a web
+                            interface and Python backend.
+                        </p>
+
+
+                        <div class="project-tech">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Python</span>
+
+                        </div>
+
+
+                        <a
+                            href="#"
+                            class="project-btn"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- =================================================
+             VIEW ALL PROJECTS
+        ================================================== -->
+
+        <div class="all-projects">
+
+            <a
+                href="projects.html"
+                class="all-projects-btn"
+            >
+                View All Projects 🚀
+            </a>
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section class="contact" id="contact">
+
+    <div class="contact-container">
+
+        <!-- =========================
+             CONTACT TITLE
+        ========================== -->
+
+        <div class="contact-title">
+
+            <span>📬 Get In Touch</span>
+=
+            <h2>
+                Let's Work
+                <strong>Together.</strong>
+            </h2>
+
+            <p>
+                Have a project idea, question, or opportunity?Send me a message and I'll get back to you.
+            </p>
+        </div>
+        <!-- =========================
+             CONTACT CONTENT
+        ========================== -->
+        <div class="contact-content">
+            <!-- =========================
+                 LEFT SIDE
+            ========================== -->
+            <div class="contact-info">
+                <h3>Let's Connect 🤝</h3>
+                <p>
+                    I'm always interested in new projects, creative ideas,and opportunities to learn and build something useful.
+                </p>
+                <!-- =========================
+                     SOCIAL MEDIA
+                ========================== -->
+            <div class="social-links">
+
+                <!-- GITHUB -->
+                <a href="https://github.com/thelewi" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub">
+                    <img src="assets/github.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </a>
+                <!-- INSTAGRAM -->
+                <a href="https://www.instagram.com/itz.thelewi/" target="_blank" rel="noopener noreferrer"  class="social-btn" aria-label="Instagram">
+                    <img src="assets/instagram.svg" alt="Instagram">
+                    <span>Instagram</span>
+                </a>
+                <!-- LINKEDIN -->
+                <a href="https://www.linkedin.com/in/itzthelewi/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn">
+                    <img src="assets/linkedin-dark.svg" alt="LinkedIn">
+                    <span>LinkedIn</span>
+                </a>
+                <!-- YOUTUBE -->
+                <a href="https://www.youtube.com/@LewiEphrem" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube">
+                    <img src="assets/youtube.svg" alt="YouTube">
+                    <span>YouTube</span>
+                </a>
+                <!-- TELEGRAM -->
+                <a href="https://t.me/lewiep" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Telegram">
+                    <img src="assets/telegram.svg" alt="Telegram">
+                    <span>Telegram</span>
+                </a>
+                <!-- WHATSAPP -->
+                <a href="https://wa.me/994367526" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp" >
+                    <img src="assets/whatsapp.svg" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </a>
+            </div>
+            </div>
+            <!-- =========================
+                 CONTACT FORM
+            ========================== -->
+
+            <form class="contact-form" action="https://formspree.io/f/mbgraepy" method="POST">
+
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="What is this about?" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Write your message..."required>
+                    </textarea>
+                </div>
+
+                <button type="submit" class="send-btn">
+                    Send Message →
+                </button>
+
         </form>
-      </div>
-    </section>
+        </div>
 
-  </main>
+    </div>
 
-  <footer class="site-footer">
-    <span>© <span id="year"></span> Lewi Ephrem</span>
-    <span class="footer-note">Designed & built by hand</span>
-    <a href="#home">Back to top ↑</a>
-  </footer>
+</section>
 
-  <script>
-    // Theme toggle
-    const root = document.documentElement;
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-      const next = root.dataset.theme === "dark" ? "light" : "dark";
-      root.dataset.theme = next;
-      localStorage.setItem("theme", next);
-    });
 
-    // Animate skill bars when the list scrolls into view
-    const skillsList = document.getElementById("skills-list");
-    const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry) =>
-        entry.target.classList.toggle("animate", entry.isIntersecting)
-      );
-    }, { threshold: 0.3 });
-    io.observe(skillsList);
+    <!-- =====================================================
+         SKILL ANIMATION
+    ====================================================== -->
 
-    // Footer year
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+    <script>
+        const skillSection =document.querySelector("#skill");
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            skillSection.classList.add(
+                                "animate"
+                            );
+                        } else {
+                            skillSection.classList.remove(
+                                "animate"
+                            );
+                        }
+                    });
+                },
+                {
+                    threshold: 0.3
+                }
+            );
+        observer.observe(skillSection);
+        const cards = document.querySelectorAll(".card-container");
+        cards.forEach(container => {
+            container.addEventListener("click", function () {
+                this.classList.toggle("flipped");
+            });
+        });
+    </script>
+
+
+<footer class="footer">
+    <div class="footer-content">
+        <h2>Let's Connect 🤝</h2>
+        <p>Follow me and stay connected.</p>
+
+        <div class="footer-social">
+
+            <a href="https://github.com/thelewi" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+                <img src="assets/github.svg" alt="GitHub">
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://www.instagram.com/itz.thelewi/" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+                <img src="assets/instagram.svg" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR_USERNAME/" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+                <img src="assets/linkedin-dark.svg" alt="LinkedIn">
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="https://www.youtube.com/@LewiEphrem" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+                <img src="assets/youtube.svg" alt="YouTube">
+                <span>YouTube</span>
+            </a>
+
+            <a href="https://t.me/YOUR_USERNAME" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+                <img src="assets/telegram.svg" alt="Telegram">
+                <span>Telegram</span>
+            </a>
+
+            <a href="https://wa.me/YOUR_NUMBER" target="_blank" rel="noopener noreferrer" class="footer-social-btn">
+                <img src="assets/whatsapp.svg" alt="WhatsApp">
+                <span>WhatsApp</span>
+            </a>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Lewi Ephrem. All rights reserved.</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </div>
+</footer>
 </body>
+
 </html>
+

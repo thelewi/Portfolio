@@ -9,7 +9,7 @@ My personal developer portfolio — showcasing projects, skills, experiments, an
 #### Why a portfolio 
 portfolio are used to show and pepoles to you and your serices like Web development, Game devlopment ,and also app development.
 #### how to use it
-To see my portfolio just use this link to see and unteract on m website.
+To see my portfolio just use this link to see and interact on my website.
 
 
 ## 🚀 About Me

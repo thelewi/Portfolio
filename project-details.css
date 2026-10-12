@@ -106,7 +106,7 @@ img { display: block; max-width: 100%; height: auto; }
 .reverse .showcase-content { grid-column: 1 / 6; order: 1; }
 
 .project-index {
-  font-family: "Newsreader", serif; font-size: 3rem; color: var(--border);
+  font-family: "Newsreader", serif; font-size: 3rem; color: wheat;
   line-height: 1; margin-bottom: 1rem; font-style: italic;
 }
 .showcase-content h2 {
@@ -167,6 +167,8 @@ img { display: block; max-width: 100%; height: auto; }
   display: inline-flex; background: var(--text); color: var(--bg);
   padding: 1rem 2rem; font-weight: 500; transition: transform 0.2s;
 }
+.cta-box a{display: inline-flex;align-items: center; text-decoration: underline; transition: transform 0.2s}
+.cta-box a:hover{  background: linear-gradient(var(--accent), var(--accent)); transform: translateY(-5px);}
 .btn-primary:hover { transform: translateY(-2px); }
 
 /* ==========================================================
